@@ -54,8 +54,8 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "@react-email/components": "^0.0.35",
-    "@react-email/render": "^1.0.5",
+    "@react-email/components": "^0.0.36",
+    "@react-email/render": "^1.0.6",
     "juice": "^11.0.1",
     "node-html-parser": "^7.0.1"
   },
