@@ -51,10 +51,10 @@
     "@tiptap/core": "^2.11.7",
     "@types/react": "^19.1.2",
     "tsconfig": "workspace:*",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@react-email/components": "^0.0.35",
+    "@react-email/components": "^0.0.38",
     "@react-email/render": "^1.0.5",
     "juice": "^11.0.1",
     "node-html-parser": "^7.0.1"
