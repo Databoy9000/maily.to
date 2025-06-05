@@ -76,8 +76,7 @@ export const meta: Route.MetaFunction = () => [
   { name: 'robots', content: 'noindex, nofollow' },
   {
     name: 'googlebot',
-    content:
-      'noindex, nofollow',
+    content: 'noindex, nofollow',
   },
 ];
 
