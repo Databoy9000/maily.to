@@ -28,7 +28,7 @@ export function EmailLoginForm() {
             className="border-gray-300"
             id="email"
             name="email"
-            placeholder="john@example.com"
+            placeholder="you@example.com"
           />
         </div>
 
@@ -39,6 +39,7 @@ export function EmailLoginForm() {
             className="border-gray-300"
             id="password"
             name="password"
+            placeholder="Your password"
           />
         </div>
 
