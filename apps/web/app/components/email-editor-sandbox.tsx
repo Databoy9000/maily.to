@@ -1,16 +1,11 @@
 import { useMutation } from '@tanstack/react-query';
 import type { Editor, FocusPosition } from '@tiptap/core';
-import {
-  FileCogIcon,
-  Loader2Icon,
-  SaveIcon,
-  XIcon,
-} from 'lucide-react';
+import { FileCogIcon, Loader2Icon, SaveIcon, XIcon } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate, useRevalidator } from 'react-router';
 import { toast } from 'sonner';
 import { cn } from '~/lib/classname';
-import { FetchError, httpPost } from '~/lib/http';
+import { httpPost } from '~/lib/http';
 import type { Database } from '~/types/database';
 import { DeleteEmailDialog } from './delete-email-dialog';
 import { EmailEditor } from './email-editor';
@@ -67,25 +62,6 @@ export function EmailEditorSandbox(props: EmailEditorSandboxProps) {
       },
       onSuccess: (data) => {
         navigate(`/templates/${data.template.id}`);
-      },
-    });
-
-  const { mutateAsync: sendTestEmail, isPending: isSendTestEmailPending } =
-    useMutation({
-      mutationFn: async () => {
-        const json = editor?.getJSON();
-        if (!json) {
-          throw new FetchError(400, 'Editor content is empty');
-        }
-
-        return httpPost(`/api/v1/emails/send`, {
-          subject,
-          previewText,
-          from,
-          to,
-          replyTo,
-          content: JSON.stringify(json),
-        });
       },
     });
 

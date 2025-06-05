@@ -1,10 +1,8 @@
 import type { Route } from './+types/login';
-import { data, Link, redirect } from 'react-router';
+import { data, redirect } from 'react-router';
 import * as v from 'valibot';
 import { EmailLoginForm } from '~/components/auth/email-login';
-import { buttonVariants } from '~/components/ui/button';
 import { createSupabaseServerClient } from '~/lib/supabase/server';
-import { cn } from '~/lib/classname';
 import { mergeRouteModuleMeta } from '~/lib/merge-meta';
 import { json } from '~/lib/response';
 
@@ -114,7 +112,8 @@ export default function Login() {
             </div>
 
             <p className="mb-6">
-              You must be logged in to access the Maily editor. Please enter your email and password to continue.
+              You must be logged in to access the Maily editor. Please enter
+              your email and password to continue.
             </p>
 
             <EmailLoginForm />
