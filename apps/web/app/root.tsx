@@ -14,7 +14,6 @@ import { Toaster } from 'sonner';
 import { NavigationLoadingBar } from './components/navigation-loader';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from './lib/query-client';
-import { GoogleAnalytics } from './components/google-analytics';
 
 export const links: Route.LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -73,12 +72,12 @@ export const meta: Route.MetaFunction = () => [
   { name: 'og:image:height', content: '630' },
   { name: 'og:image:alt', content: 'Maily Preview' },
   { name: 'theme-color', content: '#ffffff' },
-  // Indexing
-  { name: 'robots', content: 'index, follow' },
+  // Disable indexing
+  { name: 'robots', content: 'noindex, nofollow' },
   {
     name: 'googlebot',
     content:
-      'index, follow, max-video-preview: -1, max-image-preview: large, max-snippet: -1',
+      'noindex, nofollow',
   },
 ];
 
@@ -88,8 +87,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <GoogleAnalytics />
 
         <Meta />
         <Links />
