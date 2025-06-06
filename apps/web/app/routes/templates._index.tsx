@@ -73,5 +73,5 @@ export async function loader(args: Route.LoaderArgs) {
 }
 
 export default function Templates() {
-  return <EmailEditorSandbox />;
+  return <EmailEditorSandbox autofocus="end" />;
 }

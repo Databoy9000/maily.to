@@ -1,10 +1,8 @@
 import type { Route } from './+types/login';
-import { data, Link, redirect } from 'react-router';
+import { data, redirect } from 'react-router';
 import * as v from 'valibot';
 import { EmailLoginForm } from '~/components/auth/email-login';
-import { buttonVariants } from '~/components/ui/button';
 import { createSupabaseServerClient } from '~/lib/supabase/server';
-import { cn } from '~/lib/classname';
 import { mergeRouteModuleMeta } from '~/lib/merge-meta';
 import { json } from '~/lib/response';
 
@@ -107,20 +105,16 @@ export default function Login() {
   return (
     <main className="mx-auto w-full max-w-[calc(36rem+40px)] px-5">
       <div className="container relative flex h-screen flex-col items-center justify-center sm:grid lg:max-w-none lg:px-0">
-        <Link
-          className={cn(
-            buttonVariants({ variant: 'ghost' }),
-            'absolute left-4 top-4 md:left-8 md:top-8'
-          )}
-          to="/playground"
-        >
-          Playground
-        </Link>
         <div className="lg:p-8">
           <div className="mx-auto flex w-full flex-col justify-center sm:w-[360px]">
-            <div className="mb-10 flex flex-col space-y-2 text-center">
+            <div className="mb-6 flex flex-col space-y-2 text-center">
               <h1 className="text-2xl font-semibold tracking-tight">Login</h1>
             </div>
+
+            <p className="mb-6">
+              You must be logged in to access the Maily editor. Please enter
+              your email and password to continue.
+            </p>
 
             <EmailLoginForm />
           </div>
