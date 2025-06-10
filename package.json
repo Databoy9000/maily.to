@@ -16,7 +16,7 @@
   "devDependencies": {
     "@remix-run/dev": "^2.16.8",
     "@types/node": "^22.15.30",
-    "@types/react": "^19.1.5",
+    "@types/react": "^19.1.7",
     "@types/react-dom": "^19.1.5",
     "eslint": "^9.28.0",
     "happy-dom": "^17.5.6",
