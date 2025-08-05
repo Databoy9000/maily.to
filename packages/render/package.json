@@ -52,7 +52,7 @@
     "@tiptap/core": "^2.23.1",
     "@types/react": "^19.1.9",
     "tsconfig": "workspace:*",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   },
   "dependencies": {
     "@react-email/components": "^0.1.1",
