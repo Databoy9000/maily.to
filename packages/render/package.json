@@ -50,7 +50,7 @@
     "@babel/preset-react": "^7.27.1",
     "@maily-to/shared": "workspace:*",
     "@tiptap/core": "^2.23.1",
-    "@types/react": "^19.1.9",
+    "@types/react": "^19.1.10",
     "tsconfig": "workspace:*",
     "typescript": "^5.9.2"
   },
