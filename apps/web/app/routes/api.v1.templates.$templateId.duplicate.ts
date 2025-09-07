@@ -1,6 +1,6 @@
 import { createSupabaseServerClient } from '~/lib/supabase/server';
 import type { Route } from './+types/api.v1.templates.$templateId.duplicate';
-import { z } from 'zod';
+import * as z from 'zod';
 import { serializeZodError } from '~/lib/errors';
 import { json } from '~/lib/response';
 
