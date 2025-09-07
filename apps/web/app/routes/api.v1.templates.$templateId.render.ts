@@ -168,8 +168,8 @@ export async function action(args: Route.ActionArgs) {
 
   const body = await request.json();
   const schema = z.object({
-    variables: z.record(z.any()).optional(),
-    repeatVariables: z.record(z.any()).optional(),
+    variables: z.record(z.string(), z.any()).optional(),
+    repeatVariables: z.record(z.string(), z.any()).optional(),
     previewText: z.string().optional(),
   });
 
