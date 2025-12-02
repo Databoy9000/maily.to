@@ -189,7 +189,7 @@
     "tailwind-config": "workspace:*",
     "tailwind-merge": "^2.5.4",
     "tsconfig": "workspace:*",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
     "react": "^18 || ^19"
